@@ -30,6 +30,39 @@ const result = addTwoNumber(5,5)
 function loginUserMessage(username){
     return `${username} just logged in`
 }
-
 // loginUserMessage("Sam") //this will not give any output because it is not called in console.log 
-console.log(loginUserMessage("Sam")) //this will give output Sam just logged in 
+// console.log(loginUserMessage("Sam")) //this will give output Sam just logged in 
+
+function calcutaleCartPrice(...num1){
+    return num1
+}
+// console.log(calcutaleCartPrice(200, 300, 400, 500)) //this will give output [ 200, 300, 400, 500 ] because we are using rest operator in function parameter
+
+
+// using object in the function parameter 
+const user = {
+    username: "sammy",
+    price: 200
+}
+
+function handleObject (anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`) //this will give output Username is sammy and price is 200
+}
+
+// handleObject(user) //this will give output Username is sammy and price is 200
+
+handleObject({
+    username: 'Tim',
+    price: 2000
+}) 
+
+//using arrays in the function parameter
+const myNewArray = [200, 300, 400, 500]
+
+function returnSecondaryArray (getArray){
+    return getArray[1] //this will return the second element of the array
+}
+
+console.log(returnSecondaryArray(myNewArray)) //this will give output 300 because it is the second element of the array 
+//this can be written in short form as below
+console.log (returnSecondaryArray([100, 200, 300, 400])) //this will give output 200 because it is the second element of the array
